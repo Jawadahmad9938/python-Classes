@@ -1,0 +1,65 @@
+print("Welcome To Our Hostel \n")
+print("Choose 1 For Register Yourself ")
+print("Choose 2 For Review ")
+
+operation = int(input("Choose Your Operation: "))
+
+if  operation == 1:
+    class Customer:
+        def __init__(self, name, fname, email, number, cnic):
+            self.name = name
+            self.fname = fname
+            self.email = email
+            self.number = number
+            self.cnic = cnic 
+        
+        def display_data(self):
+            print(self.name)
+            print(self.fname)
+            print(self.email)
+            print(self.number)
+            print(self.cnic)
+    
+    name = input("Enter Your Name: ")
+    fname = input("Enter Your Father Name: ")
+    email = input("Enter Your Email: ")
+    number = input("Enter Your Number: ")
+    cnic = input("Enter Your CNIC: ")
+    
+    cus1 = Customer(name, fname, email, number, cnic)
+    cus1.display_data()
+
+elif operation == 2:
+    class Reviews:
+        def __init__(self, location, environment, security, facilities, cleanliness, management, behaviour):
+            self.location = location
+            self.environment = environment
+            self.security = security
+            self.facilities = facilities
+            self.cleanliness = cleanliness
+            self.management = management
+            self.behaviour = behaviour
+        
+        def display_data(self):
+            print("Location: ", self.location)
+            print("Environment: ", self.environment)
+            print("Security: ", self.security)
+            print("Facilities: ", self.facilities)
+            print("Cleanliness: ", self.cleanliness)
+            print("Management: ", self.management)
+            print("Behaviour: ", self.behaviour)
+    
+    location = input("Is location is good or not? ")
+    environment = input("How do you feel about the environment of hostel? ")
+    security = input("Are you feel secure or not in hostel? ")
+    facilities = input("Does the hostel provides all types of facilities or not? ")
+    cleanliness = input("Is Hostel is clean or Not? ")
+    management = input("Is management are good or not? ")
+    behaviour = input("Do you like the behaviour of hostel faculty or not? ")
+    
+    view = Reviews(location, environment, security, facilities, cleanliness, management, behaviour)
+    view.display_data()
+
+
+else:
+    print("Invalid input. Please choose either 1 or 2.")
